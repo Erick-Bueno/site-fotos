@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilos para o body */
 body {
 font-family: 'Helvetica Neue', sans-serif;
@@ -14,6 +19,7 @@ align-items: center;
 padding: 1rem;
 background-color: #fff;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+background-color: rgb(208, 191, 191);
 }
 
 .logo img {
@@ -43,10 +49,12 @@ color: #aaa;
 
 /* Estilos para a seção de destaque */
 .imagem-destaque {
-margin: 2rem 0;
 display: flex;
 justify-content: center;
 align-items: center;
+background-image: url(https://png.pngtree.com/background/20210711/original/pngtree-website-background-image-red-mystery-picture-image_1146508.jpg);
+background-size: cover;
+height: 300px;
 }
 
 .imagem-destaque img {
@@ -90,14 +98,18 @@ list-style: none;
 margin-bottom: 1rem;
 }
 
+.servicos .row {
+    display: flex;
+    gap: 20px;
+}
+
+.servicos .row .img {
+    height: 20px;
+}
+
 /* Estilos para a seção de galeria */
 .galeria {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-padding: 2rem;
-background-color: #f9f9f9;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .galeria h2 {
@@ -106,13 +118,29 @@ text-align: center;
 margin-bottom: 2rem;
 }
 
-.galeria .imagem {
-width: 30%;
-margin-bottom: 2rem;
+.galeria .row {
+    display: flex;
 }
 
-.galeria .imagem img {
-width: 100%;
+.galeria .col {
+    flex: 1;
+    width: 33.3333%;
+    position: relative;
+}
+
+.galeria .col img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria .col:before {
+    content: "";
+    display: block;
+    padding-top: 100%; 
 }
 
 /* Estilos para o footer */
